@@ -41,7 +41,7 @@ WHERE inimeneID=3;
 
 --tabel elukoht
 CREATE TABLE elukoht(
-elukohtID int PRIMARY KEY IDENTITY(1,1),
+elukohtID int PRIMARY KEY AUTO_INCREMENT,
 elukoht varchar(50) UNIQUE,
 maakond varchar(50));
 SELECT * FROM elukoht;
@@ -72,7 +72,7 @@ SELECT i.nimi, i.sünniaeg, e.elukoht FROM inimene i join elukoht e
 ON i.elukohtID=e.elukohtID;
 
 CREATE TABLE auto(
-autoID int PRIMARY KEY IDENTITY(1,1),
+autoID int PRIMARY KEY AUTO_INCREMENT,
 autoNr varchar(50),
 mudell varchar(50),
 mark varchar(50),
